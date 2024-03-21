@@ -466,7 +466,7 @@ function get_endpoint_url(network_name) {
 		case "binance_testnet": return "https://data-seed-prebsc-1-s3.binance.org:8545/";
 		case "opBnb": return "https://opbnb-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3";
 		case "opBnb_testnet": return "https://opbnb-testnet.nodereal.io/v1/9989d39cb7484ee9abcec2132a242315";
-		// case "base_mainnet": return "https://mainnet.base.org";
+		case "base_mainnet": return "https://mainnet.base.org";
 		case "base_goerli": return "https://goerli.base.org";
 	}
 
