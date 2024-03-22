@@ -98,94 +98,6 @@ require("hardhat-deploy");
 
 // verify environment setup, display warning if required, replace missing values with fakes
 const FAKE_MNEMONIC = "test test test test test test test test test test test junk";
-if (!process.env.MNEMONIC1 && !process.env.P_KEY1) {
-	console.warn("neither MNEMONIC1 nor P_KEY1 is not set. Mainnet deployments won't be available");
-	process.env.MNEMONIC1 = FAKE_MNEMONIC;
-}
-else if (process.env.P_KEY1 && !process.env.P_KEY1.startsWith("0x")) {
-	console.warn("P_KEY1 doesn't start with 0x. Appended 0x");
-	process.env.P_KEY1 = "0x" + process.env.P_KEY1;
-}
-if (!process.env.MNEMONIC3 && !process.env.P_KEY3) {
-	console.warn("neither MNEMONIC3 nor P_KEY3 is not set. Ropsten deployments won't be available");
-	process.env.MNEMONIC3 = FAKE_MNEMONIC;
-}
-else if (process.env.P_KEY3 && !process.env.P_KEY3.startsWith("0x")) {
-	console.warn("P_KEY3 doesn't start with 0x. Appended 0x");
-	process.env.P_KEY3 = "0x" + process.env.P_KEY3;
-}
-if (!process.env.MNEMONIC4 && !process.env.P_KEY4) {
-	console.warn("neither MNEMONIC4 nor P_KEY4 is not set. Rinkeby deployments won't be available");
-	process.env.MNEMONIC4 = FAKE_MNEMONIC;
-}
-else if (process.env.P_KEY4 && !process.env.P_KEY4.startsWith("0x")) {
-	console.warn("P_KEY4 doesn't start with 0x. Appended 0x");
-	process.env.P_KEY4 = "0x" + process.env.P_KEY4;
-}
-if (!process.env.MNEMONIC42 && !process.env.P_KEY42) {
-	console.warn("neither MNEMONIC42 nor P_KEY42 is not set. Kovan deployments won't be available");
-	process.env.MNEMONIC42 = FAKE_MNEMONIC;
-}
-else if (process.env.P_KEY42 && !process.env.P_KEY42.startsWith("0x")) {
-	console.warn("P_KEY42 doesn't start with 0x. Appended 0x");
-	process.env.P_KEY42 = "0x" + process.env.P_KEY42;
-}
-if (!process.env.MNEMONIC5 && !process.env.P_KEY5) {
-	console.warn("neither MNEMONIC5 nor P_KEY5 is not set. Goerli deployments won't be available");
-	process.env.MNEMONIC5 = FAKE_MNEMONIC;
-}
-else if (process.env.P_KEY5 && !process.env.P_KEY5.startsWith("0x")) {
-	console.warn("P_KEY5 doesn't start with 0x. Appended 0x");
-	process.env.P_KEY5 = "0x" + process.env.P_KEY5;
-}
-if (!process.env.MNEMONIC137 && !process.env.P_KEY137) {
-	console.warn("neither MNEMONIC137 nor P_KEY137 is not set. Polygon mainnet deployments won't be available");
-	process.env.MNEMONIC137 = FAKE_MNEMONIC;
-}
-else if (process.env.P_KEY137 && !process.env.P_KEY137.startsWith("0x")) {
-	console.warn("P_KEY137 doesn't start with 0x. Appended 0x");
-	process.env.P_KEY137 = "0x" + process.env.P_KEY137;
-}
-if (!process.env.MNEMONIC80001 && !process.env.P_KEY80001) {
-	console.warn("neither MNEMONIC80001 nor P_KEY80001 is not set. Mumbai (matic/polygon L2 testnet) deployments won't be available");
-	process.env.MNEMONIC80001 = FAKE_MNEMONIC;
-}
-else if (process.env.P_KEY80001 && !process.env.P_KEY80001.startsWith("0x")) {
-	console.warn("P_KEY80001 doesn't start with 0x. Appended 0x");
-	process.env.P_KEY80001 = "0x" + process.env.P_KEY80001;
-}
-if (!process.env.MNEMONIC56 && !process.env.P_KEY56) {
-	console.warn("neither MNEMONIC56 nor P_KEY56 is not set. Binance Smart Chain (BSC) mainnet deployments won't be available");
-	process.env.MNEMONIC56 = FAKE_MNEMONIC;
-}
-else if (process.env.P_KEY56 && !process.env.P_KEY56.startsWith("0x")) {
-	console.warn("P_KEY56 doesn't start with 0x. Appended 0x");
-	process.env.P_KEY56 = "0x" + process.env.P_KEY56;
-}
-if (!process.env.MNEMONIC97 && !process.env.P_KEY97) {
-	console.warn("neither MNEMONIC97 nor P_KEY97 is not set. Binance Smart Chain (BSC) testnet deployments won't be available");
-	process.env.MNEMONIC97 = FAKE_MNEMONIC;
-}
-else if (process.env.P_KEY97 && !process.env.P_KEY97.startsWith("0x")) {
-	console.warn("P_KEY97 doesn't start with 0x. Appended 0x");
-	process.env.P_KEY97 = "0x" + process.env.P_KEY97;
-}
-if (!process.env.MNEMONIC204 && !process.env.P_KEY204) {
-	console.warn("neither MNEMONIC204 nor P_KEY204 is not set. Binance opBNB deployments won't be available");
-	process.env.MNEMONIC204 = FAKE_MNEMONIC;
-}
-else if (process.env.P_KEY204 && !process.env.P_KEY204.startsWith("0x")) {
-	console.warn("P_KEY204 doesn't start with 0x. Appended 0x");
-	process.env.P_KEY204 = "0x" + process.env.P_KEY204;
-}
-if (!process.env.MNEMONIC5611 && !process.env.P_KEY5611) {
-	console.warn("neither MNEMONIC5611 nor P_KEY5611 is not set. Binance opBNB testnet deployments won't be available");
-	process.env.MNEMONIC5611 = FAKE_MNEMONIC;
-}
-else if (process.env.P_KEY5611 && !process.env.P_KEY5611.startsWith("0x")) {
-	console.warn("P_KEY5611 doesn't start with 0x. Appended 0x");
-	process.env.P_KEY5611 = "0x" + process.env.P_KEY5611;
-}
 if (!process.env.MNEMONIC8453 && !process.env.P_KEY8453) {
 	console.warn("neither MNEMONIC8453 nor P_KEY8453 is not set. Base Mainnet deployments won't be available");
 	process.env.MNEMONIC8453 = FAKE_MNEMONIC;
@@ -206,15 +118,6 @@ if (!process.env.INFURA_KEY && !process.env.ALCHEMY_KEY) {
 	console.warn("neither INFURA_KEY nor ALCHEMY_KEY is not set. Deployments may not be available");
 	process.env.INFURA_KEY = "";
 	process.env.ALCHEMY_KEY = "";
-}
-if (!process.env.ETHERSCAN_KEY) {
-	console.warn("ETHERSCAN_KEY is not set. Deployed smart contract code verification won't be available");
-}
-if (!process.env.POLYSCAN_KEY) {
-	console.warn("POLYSCAN_KEY is not set. Deployed smart contract code verification won't be available on polyscan");
-}
-if (!process.env.BSCSCAN_KEY) {
-	console.warn("BSCSCAN_KEY is not set. Deployed smart contract code verification won't be available on BscScan");
 }
 if (!process.env.BASESCAN_KEY) {
 	console.warn("BASESCAN_KEY is not set. Deployed smart contract code verification won't be available on BaseScan");
@@ -249,64 +152,7 @@ module.exports = {
 			url: "http://127.0.0.1:8545/",
 			accounts: { mnemonic: FAKE_MNEMONIC },
 		},
-
-		// https://etherscan.io/
-		mainnet: {
-			url: get_endpoint_url("mainnet"),
-			accounts: get_accounts(process.env.P_KEY1, process.env.MNEMONIC1),
-		},
-		// https://ropsten.etherscan.io/
-		ropsten: {
-			url: get_endpoint_url("ropsten"),
-			accounts: get_accounts(process.env.P_KEY3, process.env.MNEMONIC3),
-		},
-		// https://rinkeby.etherscan.io/
-		rinkeby: {
-			url: get_endpoint_url("rinkeby"),
-			accounts: get_accounts(process.env.P_KEY4, process.env.MNEMONIC4),
-		},
-		// https://kovan.etherscan.io/
-		kovan: {
-			url: get_endpoint_url("kovan"),
-			accounts: get_accounts(process.env.P_KEY42, process.env.MNEMONIC42),
-		},
-		// https://goerli.etherscan.io/
-		goerli: {
-			url: get_endpoint_url("goerli"),
-			accounts: get_accounts(process.env.P_KEY5, process.env.MNEMONIC5),
-		},
-		// matic/polygon L2 mainnet
-		// https://polygonscan.com/
-		polygon: {
-			url: get_endpoint_url("polygon"),
-			accounts: get_accounts(process.env.P_KEY137, process.env.MNEMONIC137),
-		},
-		// matic/polygon L1 testnet – Mumbai
-		// https://mumbai.polygonscan.com/
-		mumbai: {
-			url: get_endpoint_url("mumbai"),
-			accounts: get_accounts(process.env.P_KEY80001, process.env.MNEMONIC80001),
-		},
-		// Binance Smart Chain (BSC) L2 mainnet
-		binance: {
-			url: get_endpoint_url("binance"),
-			accounts: get_accounts(process.env.P_KEY56, process.env.MNEMONIC56),
-		},
-		// Binance Smart Chain (BSC) L2 testnet
-		binance_testnet: {
-			url: get_endpoint_url("binance_testnet"),
-			accounts: get_accounts(process.env.P_KEY97, process.env.MNEMONIC97),
-		},
-		// Binance opBNB Optimistic Rollup (L2) mainnet
-		opBnb: {
-			url: get_endpoint_url("opBnb"),
-			accounts: get_accounts(process.env.P_KEY204, process.env.MNEMONIC204),
-		},
-		// Binance opBNB Optimistic Rollup (L2) testnet
-		opBnb_testnet: {
-			url: get_endpoint_url("opBnb_testnet"),
-			accounts: get_accounts(process.env.P_KEY5611, process.env.MNEMONIC5611),
-		},
+	
 		// Base Mainnet Optimistic Rollup (L2)
 		base_mainnet: {
 			url: get_endpoint_url("base_mainnet"),
@@ -394,33 +240,6 @@ module.exports = {
 function get_endpoint_url(network_name) {
 	// try custom RPC endpoint first (private node, quicknode, etc.)
 	// create a quicknode key: https://www.quicknode.com/
-	if (process.env.MAINNET_RPC_URL && network_name === "mainnet") {
-		return process.env.MAINNET_RPC_URL;
-	}
-	if (process.env.ROPSTEN_RPC_URL && network_name === "ropsten") {
-		return process.env.ROPSTEN_RPC_URL;
-	}
-	if (process.env.RINKEBY_RPC_URL && network_name === "rinkeby") {
-		return process.env.RINKEBY_RPC_URL;
-	}
-	if (process.env.KOVAN_RPC_URL && network_name === "kovan") {
-		return process.env.KOVAN_RPC_URL;
-	}
-	if (process.env.GOERLI_RPC_URL && network_name === "goerli") {
-		return process.env.GOERLI_RPC_URL;
-	}
-	if (process.env.POLYGON_RPC_URL && network_name === "polygon") {
-		return process.env.POLYGON_RPC_URL;
-	}
-	if (process.env.MUMBAI_RPC_URL && network_name === "mumbai") {
-		return process.env.MUMBAI_RPC_URL;
-	}
-	if (process.env.BSC_RPC_URL && network_name === "binance") {
-		return process.env.BSC_RPC_URL;
-	}
-	if (process.env.BSC_TESNET_RPC_URL && network_name === "binance_testnet") {
-		return process.env.BSC_TESTNET_RPC_URL;
-	}
 	if (process.env.BASE_RPC_URL && network_name === "base_mainnet") {
 		return process.env.BASE_RPC_URL;
 	}
@@ -432,40 +251,13 @@ function get_endpoint_url(network_name) {
 	// create a key: https://www.alchemy.com/
 	if (process.env.ALCHEMY_KEY) {
 		switch (network_name) {
-			case "mainnet": return "https://eth-mainnet.alchemyapi.io/v2/" + process.env.ALCHEMY_KEY;
-			case "ropsten": return "https://eth-ropsten.alchemyapi.io/v2/" + process.env.ALCHEMY_KEY;
-			case "rinkeby": return "https://eth-rinkeby.alchemyapi.io/v2/" + process.env.ALCHEMY_KEY;
-			case "kovan": return "https://eth-kovan.alchemyapi.io/v2/" + process.env.ALCHEMY_KEY;
-			case "goerli": return "https://eth-goerli.alchemyapi.io/v2/" + process.env.ALCHEMY_KEY;
-			case "polygon": return "https://polygon-mainnet.g.alchemy.com/v2/" + process.env.ALCHEMY_KEY;
-			case "mumbai": return "https://polygon-mumbai.g.alchemy.com/v2/" + process.env.ALCHEMY_KEY;
 			case "base_mainnet": return "https://base-mainnet.g.alchemy.com/v2/" + process.env.ALCHEMY_KEY;
 			case "base_goerli": return "https://base-goerli.g.alchemy.com/v2/" + process.env.ALCHEMY_KEY;
 		}
 	}
 
-	// try the infura next
-	// create a key: https://infura.io/
-	if (process.env.INFURA_KEY) {
-		switch (network_name) {
-			case "mainnet": return "https://mainnet.infura.io/v3/" + process.env.INFURA_KEY;
-			case "ropsten": return "https://ropsten.infura.io/v3/" + process.env.INFURA_KEY;
-			case "rinkeby": return "https://rinkeby.infura.io/v3/" + process.env.INFURA_KEY;
-			case "kovan": return "https://kovan.infura.io/v3/" + process.env.INFURA_KEY;
-			case "goerli": return "https://goerli.infura.io/v3/" + process.env.INFURA_KEY;
-			case "polygon": return "https://polygon-mainnet.infura.io/v3/" + process.env.INFURA_KEY;
-			case "mumbai": return "https://polygon-mumbai.infura.io/v3/" + process.env.INFURA_KEY;
-		}
-	}
-
 	// some networks don't require API key
 	switch (network_name) {
-		case "polygon": return "https://polygon-rpc.com/";
-		case "mumbai": return "https://rpc-mumbai.maticvigil.com";
-		case "binance": return "https://bsc-dataseed1.binance.org/";
-		case "binance_testnet": return "https://data-seed-prebsc-1-s3.binance.org:8545/";
-		case "opBnb": return "https://opbnb-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3";
-		case "opBnb_testnet": return "https://opbnb-testnet.nodereal.io/v1/9989d39cb7484ee9abcec2132a242315";
 		case "base_mainnet": return "https://mainnet.base.org";
 		case "base_goerli": return "https://goerli.base.org";
 	}
